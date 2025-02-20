@@ -172,3 +172,4 @@ cython_debug/
 .pypirc
 backend/alembic.ini
 backend/fitness.db
+fitness.db
