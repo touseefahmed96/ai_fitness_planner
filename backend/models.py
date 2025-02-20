@@ -1,5 +1,6 @@
 from database import Base
-from sqlalchemy import Column, Float, Integer, String
+from sqlalchemy import Column, Float, ForeignKey, Integer, String
+from sqlalchemy.orm import relationship
 
 
 class User(Base):
@@ -12,3 +13,23 @@ class User(Base):
     weight = Column(Float, default=0)
     height = Column(Float, default=0)
     goal = Column(String, default="fitness")
+
+
+class WorkoutPlan(Base):
+    __tablename__ = "workout_plans"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    plan = Column(String, nullable=False)
+
+    user = relationship("User")
+
+
+class DietPlan(Base):
+    __tablename__ = "diet_plans"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    plan = Column(String, nullable=False)
+
+    user = relationship("User")
