@@ -1,13 +1,14 @@
 from datetime import datetime, timedelta
 
-from config import Config
-from database import get_db
 from fastapi import APIRouter, Depends, HTTPException
 from jose import jwt
-from models import User
 from passlib.context import CryptContext
-from schemas import UserCreate, UserLogin
 from sqlalchemy.orm import Session
+
+from backend.config import Config
+from backend.database import get_db
+from backend.models import User
+from backend.schemas import UserCreate, UserLogin
 
 router = APIRouter()
 

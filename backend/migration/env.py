@@ -1,7 +1,8 @@
 import os
 
+import models
 from alembic import context
-from database import Base
+from database import Base, engine
 from sqlalchemy import engine_from_config, pool
 
 # Load database connection from the config file

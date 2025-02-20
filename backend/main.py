@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from routes import diet, user, workout
+
+from .routes import diet, user, workout
 
 app = FastAPI(title="AI Workout & Diet Planner", version="1.0")
 
