@@ -1,8 +1,7 @@
+from config import Config
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
-from backend.config import Config
 
 DATABASE_URL = Config.DATABASE_URL
 
@@ -25,7 +24,7 @@ def get_db():
 
 # Directly create tables on startup
 def initialize_database():
-    from .models import DietPlan, User, WorkoutPlan
+    from models import DietPlan, User, WorkoutPlan
 
     Base.metadata.create_all(engine)
 
