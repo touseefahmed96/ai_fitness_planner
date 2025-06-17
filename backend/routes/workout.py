@@ -1,10 +1,9 @@
+from config import Config
+from database import get_db
 from fastapi import APIRouter, Depends, HTTPException
 from groq import Groq
+from models import WorkoutPlan
 from sqlalchemy.orm import Session
-
-from backend.config import Config
-from backend.database import get_db
-from backend.models import WorkoutPlan
 
 router = APIRouter()
 
