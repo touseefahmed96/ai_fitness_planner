@@ -8,8 +8,3 @@ class UserCreate(BaseModel):
     weight: float
     height: float
     goal: str
-
-
-class UserLogin(BaseModel):
-    email: str
-    password: str
