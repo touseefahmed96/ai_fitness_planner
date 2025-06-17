@@ -1,8 +1,8 @@
-from config import Config
-from database import get_db
+from app.core.config import Config
+from app.db.session import get_db
+from app.models.diet import DietPlan
 from fastapi import APIRouter, Depends, HTTPException
 from groq import Groq
-from models import DietPlan
 from sqlalchemy.orm import Session
 
 router = APIRouter()

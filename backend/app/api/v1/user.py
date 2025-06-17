@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 
-from config import Config
-from database import get_db
+from app.core.config import Config
+from app.db.session import get_db
+from app.models.user import User
+from app.schemas.user import UserCreate, UserLogin
 from fastapi import APIRouter, Depends, HTTPException
 from jose import jwt
-from models import User
 from passlib.context import CryptContext
-from schemas import UserCreate, UserLogin
 from sqlalchemy.orm import Session
 
 router = APIRouter()
