@@ -48,6 +48,7 @@ ai_fitness_planner/
 
 Create a `.env` file in the root directory:
 
+
 ```
 DATABASE_URL=postgresql+psycopg2://user:password@localhost:5432/ai_fitness_db
 SECRET_KEY=your_secret_key
