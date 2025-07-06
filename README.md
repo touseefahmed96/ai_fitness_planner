@@ -2,6 +2,7 @@
 
 AI Fitness Planner is a backend system built with FastAPI, PostgreSQL, and Groq AI integration. It provides diet and workout recommendations based on user input and authenticates users securely with JWT tokens.
 
+
 ---
 
 ## 🚀 Features
