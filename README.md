@@ -20,6 +20,7 @@ AI Fitness Planner is a backend system built with FastAPI, PostgreSQL, and Groq 
 
 ## 📂 Project Structure
 
+
 ```
 ai_fitness_planner/
 ├── backend/
