@@ -39,6 +39,7 @@ ai_fitness_planner/
 ├── uv.lock / pyproject.toml    # uv package manager files
 ```
 
+
 ---
 
 ## 📃 Environment Variables
