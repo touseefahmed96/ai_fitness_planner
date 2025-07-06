@@ -14,6 +14,7 @@ AI Fitness Planner is a backend system built with FastAPI, PostgreSQL, and Groq 
 * PostgreSQL database integration via SQLAlchemy
 * Structured, scalable FastAPI application layout
 
+
 ---
 
 ## 📂 Project Structure
