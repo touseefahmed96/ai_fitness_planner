@@ -29,8 +29,20 @@ app.add_middleware(
 
 
 @app.get("/")
-def root():
-    return {"message": "Welcome to the AI Fitness Planner API"}
+def health_check():
+    import datetime
+    import platform
+    import sys
+
+    return {
+        "status": "healthy",
+        "service": "AI Fitness Planner API",
+        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "version": "1.0.0",
+        "python_version": sys.version.split()[0],
+        "platform": platform.system(),
+        "uptime_check": "OK",
+    }
 
 
 app.include_router(user.router, prefix="/api/v1/user", tags=["User"])
